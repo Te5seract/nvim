@@ -96,7 +96,6 @@ require('packer').startup(function()
 
     use "ryanoasis/vim-devicons"
     use "kyazdani42/nvim-web-devicons"
-    use "kyazdani42/nvim-web-devicons"
 
     --end icons
     ------------------------------------------------------
