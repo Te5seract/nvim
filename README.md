@@ -1,5 +1,11 @@
 # nvim-files
 
+This is for a Windows upload, clone into the following dir:
+
+```
+cd ~/appdata/local/
+```
+
 Things to install:
 
 Chocolatey (do it in admin powershell)
