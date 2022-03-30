@@ -12,6 +12,8 @@ vim.opt.listchars:append("space:⋅")
 
 require("indent_blankline").setup {
     space_char_blankline = " ",
+    byftype_exclude = {"terminal"},
+    filetype_exclude = {"dashboard", "NvimTree", "Packer", "Startup"},
     char_highlight_list = {
         "IndentBlanklineIndent1",
         "IndentBlanklineIndent2",

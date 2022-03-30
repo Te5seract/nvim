@@ -85,6 +85,14 @@ require('packer').startup(function()
     -- file tabs
     use "romgrk/barbar.nvim"
 
+    use {
+        "startup-nvim/startup.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        config = function()
+            require"startup".setup(require"configs.startup_nvim")
+        end
+    }
+
     --end ui styling
     ------------------------------------------------------
     ------------------------------------------------------
