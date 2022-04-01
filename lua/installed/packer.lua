@@ -20,6 +20,15 @@ require('packer').startup(function()
     --show colour on css colour codes
     use "norcalli/nvim-colorizer.lua"
 
+    --javascript syntax hilighting and formatting
+    use "pangloss/vim-javascript"
+
+    --twig syntax hilighting
+    use "nelsyeung/twig.vim"
+
+    --php syntax hilighting
+    use "StanAngeloff/php.vim"
+
     --end code helpers
     ------------------------------------------------------
     ------------------------------------------------------
@@ -89,7 +98,7 @@ require('packer').startup(function()
         "startup-nvim/startup.nvim",
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
         config = function()
-            require"startup".setup(require"configs.startup_nvim")
+            --require"startup".setup(require"configs.startup_nvim")
         end
     }
 
@@ -118,7 +127,15 @@ require('packer').startup(function()
     use "tpope/vim-fugitive"
 
     --show file changes
-    use "airblade/vim-gitgutter"
+    --use "airblade/vim-gitgutter"
+
+    --gitsigns
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
 
     --end git
     ------------------------------------------------------
@@ -133,6 +150,9 @@ require('packer').startup(function()
     use "joshdick/onedark.vim"
     use "sainnhe/sonokai"
     use "sainnhe/edge"
+    use "rakr/vim-one"
+    use "marko-cerovac/material.nvim"
+    use "gosukiwi/vim-atom-dark"
 
     --end colorschemes
     ------------------------------------------------------

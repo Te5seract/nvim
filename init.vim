@@ -1,42 +1,5 @@
 call plug#begin()
 
-    "Plug 'preservim/nerdtree'
-    "Plug 'kien/ctrlp.vim'
-    "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    "Plug 'junegunn/fzf.vim'
-    "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-    "Plug 'vim-airline/vim-airline'
-    "Plug 'vim-airline/vim-airline-themes'
-    "Plug 'ryanoasis/vim-devicons'
-    "Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-    "Plug 'dyng/ctrlsf.vim'
-    "Plug 'mileszs/ack.vim'
-    "Plug 'tpope/vim-fugitive'
-    "Plug 'airblade/vim-gitgutter'
-
-    "colorschemes
-    "Plug 'safv12/andromeda.vim'
-    "Plug 'joshdick/onedark.vim'
-    "Plug 'sainnhe/sonokai'
-    "Plug 'sainnhe/edge'
-
-    "effects
-    "Plug 'tribela/vim-transparent'
-
-    "emmet
-    "Plug 'mattn/emmet-vim'
-
-    "nerd commenter
-    "Plug 'preservim/nerdcommenter'
-
-    "surround
-    "Plug 'tpope/vim-surround'
-
-    "tab styling
-    "Plug 'romgrk/barbar.nvim'
-    "Plug 'kyazdani42/nvim-web-devicons'
-
-    "indent lines
 
 call plug#end()
 
@@ -97,8 +60,11 @@ endfunction
 set statusline+=%{GitStatus()}
 
 "color scheme
-colorscheme edge 
+"colorscheme edge 
 "colorscheme andromeda
+"colorscheme one
+colorscheme onedark
+"colorscheme atom-dark-256
 
 "key mapping
 let mapleader = " "
@@ -110,9 +76,9 @@ nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-F> :Files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-augroup twig_ft
-  au!
-  autocmd BufNewFile,BufRead *.html.twig   set syntax=html
-augroup END
+"augroup twig_ft
+  "au!
+  "autocmd BufNewFile,BufRead *.html.twig   set syntax=html
+"augroup END
 
 lua require('init')
