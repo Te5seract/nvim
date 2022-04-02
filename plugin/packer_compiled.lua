@@ -140,6 +140,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nerdcommenter",
@@ -211,6 +216,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
+  ["vim-atom-dark"] = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-atom-dark",
+    url = "https://github.com/gosukiwi/vim-atom-dark"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-devicons",
@@ -240,23 +250,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-transparent"] = {
-    loaded = true,
-    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-transparent",
-    url = "https://github.com/tribela/vim-transparent"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: startup.nvim
 time([[Config for startup.nvim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "startup.nvim")
 time([[Config for startup.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

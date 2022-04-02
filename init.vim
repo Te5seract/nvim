@@ -3,9 +3,12 @@ call plug#begin()
 
 call plug#end()
 
+"neovide
+let g:neovide_cursor_vfx_mode = "railgun"
+
 syntax on
 
-set guifont=HasKlug\ Nerd\ Font
+set guifont=HasKlug\ Nerd\ Font:h8
 set background=dark
 set number
 set relativenumber
@@ -25,7 +28,7 @@ filetype plugin on
 let g:webdevicons_enable_nerdtree = 1
 let &shell='cmd.exe'
 "let g:airline_theme='bubblegum'
-let g:airline_theme='deus'
+"let g:airline_theme='deus'
 
 let g:airline_powerline_fonts = 1
 
@@ -52,19 +55,22 @@ let @h="i/* //////////////////////////////////////////////// */\<Esc>"
 "Ag
 let g:ackprg = 'ag --vimgrep'
 
-" Your vimrc
-function! GitStatus()
-  let [a,m,r] = GitGutterGetHunkSummary()
-  return printf('+%d ~%d -%d', a, m, r)
-endfunction
-set statusline+=%{GitStatus()}
+"one theme config
+let g:airline_molokai_bright = 1
+let g:airline_solarized_normal_green = 1
+
 
 "color scheme
 "colorscheme edge 
 "colorscheme andromeda
-"colorscheme one
-colorscheme onedark
+"colorscheme sonokai
+colorscheme one
+"colorscheme onedark
 "colorscheme atom-dark-256
+
+" The configuration options should be placed before `colorscheme edge`.
+let g:edge_style = 'aura'
+let g:edge_better_performance = 1
 
 "key mapping
 let mapleader = " "

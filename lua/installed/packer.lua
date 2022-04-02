@@ -153,6 +153,7 @@ require('packer').startup(function()
     use "rakr/vim-one"
     use "marko-cerovac/material.nvim"
     use "gosukiwi/vim-atom-dark"
+    use "morhetz/gruvbox"
 
     --end colorschemes
     ------------------------------------------------------

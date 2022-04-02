@@ -1,5 +1,11 @@
 # nvim-files
 
+For windows (which is the only OS I have used this for) clone this repo into:
+
+```
+AppData/Local/
+```
+
 This is for a Windows upload, clone into the following dir:
 
 ```
