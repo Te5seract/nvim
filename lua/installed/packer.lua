@@ -29,6 +29,12 @@ require('packer').startup(function()
     --php syntax hilighting
     use "StanAngeloff/php.vim"
 
+    --auto closing brackets, quotes and all that
+    use "jiangmiao/auto-pairs"
+
+    --JSX syntax hilighting
+    use "mxw/vim-jsx"
+
     --end code helpers
     ------------------------------------------------------
     ------------------------------------------------------
@@ -125,9 +131,6 @@ require('packer').startup(function()
 
     --git commands in vim
     use "tpope/vim-fugitive"
-
-    --show file changes
-    --use "airblade/vim-gitgutter"
 
     --gitsigns
     use {

@@ -76,7 +76,12 @@ let g:edge_better_performance = 1
 let mapleader = " "
 nnoremap <leader>d :m .+1<CR>
 nnoremap <leader>u :m .-2<CR>
+nnoremap <leader>s :resize +2<CR>
+nnoremap <leader>S :resize -2<CR>
+nnoremap <leader>v :vertical resize +2<CR>
+nnoremap <leader>V :vertical resize -2<CR>
 
+nnoremap <C-z> :Rg<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 "nnoremap <C-n> :NERDTreeFind<CR>
 nnoremap <C-F> :Files<CR>
