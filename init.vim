@@ -1,7 +1,3 @@
-call plug#begin()
-
-
-call plug#end()
 
 "neovide
 let g:neovide_cursor_vfx_mode = "railgun"

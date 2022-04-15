@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\andromeda.vim",
     url = "https://github.com/safv12/andromeda.vim"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\barbar.nvim",
@@ -129,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -241,6 +251,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
   },
+  ["vim-jsx"] = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-jsx",
+    url = "https://github.com/mxw/vim-jsx"
+  },
   ["vim-one"] = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-one",
@@ -250,6 +265,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-transparent"] = {
+    loaded = true,
+    path = "C:\\Users\\Isaac\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-transparent",
+    url = "https://github.com/tribela/vim-transparent"
   }
 }
 
