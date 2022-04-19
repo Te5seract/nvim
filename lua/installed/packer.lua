@@ -35,6 +35,8 @@ require('packer').startup(function()
     --JSX syntax hilighting
     use "mxw/vim-jsx"
 
+    --colour mode toggle
+    use "amadeus/vim-convert-color-to"
     --end code helpers
     ------------------------------------------------------
     ------------------------------------------------------

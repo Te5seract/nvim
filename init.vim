@@ -33,6 +33,7 @@ let g:echodoc#type = "echo"
 " Or, you could use neovim's floating text feature.
 let g:echodoc#enable_at_startup = 1
 let g:echodoc#type = 'floating'
+
 " To use a custom highlight for the float window,
 " change Pmenu to your highlight group
 highlight link EchoDocFloat Pmenu
@@ -83,9 +84,10 @@ nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-F> :Files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-"augroup twig_ft
-  "au!
-  "autocmd BufNewFile,BufRead *.html.twig   set syntax=html
-"augroup END
+"colour swapping
+nnoremap <leader>cr :ConvertColorTo rgb<CR>
+nnoremap <leader>cra :ConvertColorTo rgba<CR>
+nnoremap <leader>ch :ConvertColorTo hex<CR>
+nnoremap <leader>cha :ConvertColorTo hexa<CR>
 
 lua require('init')
