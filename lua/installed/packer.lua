@@ -37,6 +37,10 @@ require('packer').startup(function()
 
     --colour mode toggle
     use "amadeus/vim-convert-color-to"
+
+    --wordpress auto complete & suggestions
+    use "dsawardekar/wordpress.vim"
+
     --end code helpers
     ------------------------------------------------------
     ------------------------------------------------------
