@@ -1,6 +1,5 @@
-
 "neovide
-let g:neovide_cursor_vfx_mode = "railgun"
+"let g:neovide_cursor_vfx_mode = "railgun"
 
 syntax on
 
@@ -18,6 +17,7 @@ set termguicolors
 set encoding=UTF-8
 set noswapfile
 set cursorline
+"set rtp+=/usr/local/opt/fzf
 
 filetype plugin on
 
@@ -25,8 +25,6 @@ let g:webdevicons_enable_nerdtree = 1
 let &shell='cmd.exe'
 "let g:airline_theme='bubblegum'
 "let g:airline_theme='deus'
-
-let g:airline_powerline_fonts = 1
 
 "echodoc (tooltips)
 let g:echodoc#type = "echo"
@@ -77,11 +75,12 @@ nnoremap <leader>s :resize +2<CR>
 nnoremap <leader>S :resize -2<CR>
 nnoremap <leader>v :vertical resize +2<CR>
 nnoremap <leader>V :vertical resize -2<CR>
+nnoremap <leader>w :w<CR>
 
-nnoremap <C-z> :Rg<CR>
+nnoremap <C-z> :Telescope live_grep<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 "nnoremap <C-n> :NERDTreeFind<CR>
-nnoremap <C-F> :Files<CR>
+nnoremap <C-F> :Telescope find_files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 "colour swapping

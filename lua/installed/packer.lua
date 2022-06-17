@@ -69,8 +69,6 @@ require('packer').startup(function()
     --file & buffer searching
 
     --fuzzy finder
-    use "junegunn/fzf.vim"
-    use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
 
     --file tree
     use "preservim/nerdtree"
@@ -96,9 +94,12 @@ require('packer').startup(function()
     ------------------------------------------------------
     --ui styling
 
-    --status bar styling
-    use "vim-airline/vim-airline"
-    use "vim-airline/vim-airline-themes"
+    use "windwp/windline.nvim"
+
+    --use {
+      --'nvim-lualine/lualine.nvim',
+      --requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    --}
 
     --transaprent background
     use "tribela/vim-transparent"
