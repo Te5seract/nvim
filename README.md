@@ -4,6 +4,12 @@ Node JS must be installed:
 
 [NodeJS](https://nodejs.org/en/)
 
+Clone the repo into:
+
+```
+~/.config/
+```
+
 
 #Directions
 
