@@ -81,7 +81,8 @@ nnoremap <leader>V :vertical resize -2<CR>
 nnoremap <leader>w :w<CR>
 
 nnoremap <C-z> :Rg<CR>
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <C-n> :NvimTreeFocus<CR>
+nnoremap <C-o> :NvimTreeToggle<CR>
 nnoremap <C-F> :Files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
