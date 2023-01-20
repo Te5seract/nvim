@@ -18,6 +18,7 @@ set termguicolors
 set encoding=UTF-8
 set noswapfile
 set cursorline
+set mouse=
 
 filetype plugin on
 
@@ -77,10 +78,10 @@ nnoremap <leader>s :resize +2<CR>
 nnoremap <leader>S :resize -2<CR>
 nnoremap <leader>v :vertical resize +2<CR>
 nnoremap <leader>V :vertical resize -2<CR>
+nnoremap <leader>w :w<CR>
 
 nnoremap <C-z> :Rg<CR>
-nnoremap <C-n> :NERDTreeFocus<CR>
-"nnoremap <C-n> :NERDTreeFind<CR>
+nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <C-F> :Files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 

@@ -75,6 +75,15 @@ require('packer').startup(function()
     --file tree
     use "preservim/nerdtree"
 
+    --nvim tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+
     --search files or buffers
     use "kien/ctrlp.vim"
 

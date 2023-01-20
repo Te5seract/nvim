@@ -10,5 +10,7 @@ require("config/blankline/blankline-config")
 
 require("config/lsp-signature/lsp-signature-config")
 
+require("config/nvim-tree/nvim-tree")
+
 --colorscheme
 --require("material").setup()
