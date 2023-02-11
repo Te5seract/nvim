@@ -80,10 +80,17 @@ nnoremap <leader>v :vertical resize +2<CR>
 nnoremap <leader>V :vertical resize -2<CR>
 nnoremap <leader>w :w<CR>
 
-nnoremap <C-z> :Rg<CR>
+"telescope
+nnoremap <leader>ff :Telescope find_files<CR>
+nnoremap <leader>zz :Telescope live_grep<CR>
+nnoremap <leader>bb :Telescope buffers<CR>
+
+"nnoremap <C-z> :Rg<CR>
+"nnoremap <C-z> :Telescope live_grep<CR>
 nnoremap <C-n> :NvimTreeFocus<CR>
 nnoremap <C-o> :NvimTreeToggle<CR>
-nnoremap <C-F> :Files<CR>
+"nnoremap <C-F> :Files<CR>
+"nnoremap <C-F> :Telescope find_files<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 "colour swapping

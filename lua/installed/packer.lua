@@ -1,45 +1,62 @@
-require('packer').startup(function()
-    use 'wbthomason/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = ' ';
+vim.g.maplocalleader = ' ';
+
+require('lazy').setup({
     ------------------------------------------------------
     ------------------------------------------------------
     --code helpers
  
     --line indentation
-    use "lukas-reineke/indent-blankline.nvim"
+    { "lukas-reineke/indent-blankline.nvim" },
 
     --code commenting commands
-    use "preservim/nerdcommenter"
+    "preservim/nerdcommenter",
 
     --html generator
-    use "mattn/emmet-vim"
+    "mattn/emmet-vim",
 
     --surround with container chars
-    use "tpope/vim-surround"
+    "tpope/vim-surround",
 
     --show colour on css colour codes
-    use "norcalli/nvim-colorizer.lua"
+    "norcalli/nvim-colorizer.lua",
 
     --javascript syntax hilighting and formatting
-    use "pangloss/vim-javascript"
+    "pangloss/vim-javascript",
 
     --twig syntax hilighting
-    use "nelsyeung/twig.vim"
+    "nelsyeung/twig.vim",
 
     --php syntax hilighting
-    use "StanAngeloff/php.vim"
+    "StanAngeloff/php.vim",
 
     --auto closing brackets, quotes and all that
-    use "jiangmiao/auto-pairs"
+    "jiangmiao/auto-pairs",
 
     --JSX syntax hilighting
-    use "mxw/vim-jsx"
+    "mxw/vim-jsx",
 
     --colour mode toggle
-    use "amadeus/vim-convert-color-to"
+    "amadeus/vim-convert-color-to",
 
     --wordpress auto complete & suggestions
-    use "dsawardekar/wordpress.vim"
+    "dsawardekar/wordpress.vim",
+
+    --tree sitter
+    "nvim-treesitter/nvim-treesitter",
 
     --end code helpers
     ------------------------------------------------------
@@ -51,13 +68,21 @@ require('packer').startup(function()
     --intellisense & docs
 
     --code suggestions
-    use {"neoclide/coc.nvim", branch = "release"}
+    --{"neoclide/coc.nvim", branch = "release"},
+
+    --mason (intellisense)
+    {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        "mfussenegger/nvim-dap"
+    },
 
     --show function documentation while writing
-    use "shougo/echodoc.vim"
+    "shougo/echodoc.vim",
 
     --show function documentation in suggestions
-    use "ray-x/lsp_signature.nvim"
+    "ray-x/lsp_signature.nvim",
 
     --end intellisense & docs
     ------------------------------------------------------
@@ -67,34 +92,36 @@ require('packer').startup(function()
     ------------------------------------------------------
     ------------------------------------------------------
     --file & buffer searching
-
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+        dependancies = { {'nvim-lua/plenary.nvim'} }
+    },
     --fuzzy finder
-    use "junegunn/fzf.vim"
-    use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+    --"junegunn/fzf.vim",
+    --"junegunn/fzf",
+    --{'junegunn/fzf', dir = '~/.fzf', build = './install --all' },
 
     --file tree
-    use "preservim/nerdtree"
+    "preservim/nerdtree",
 
     --nvim tree
-    use {
+    {
         'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+    },
 
     --search files or buffers
-    use "kien/ctrlp.vim"
+    "kien/ctrlp.vim",
 
     --search within files
-    use "mhinz/vim-grepper"
+    "mhinz/vim-grepper",
 
     --search within file
-    use "dyng/ctrlsf.vim"
+    "dyng/ctrlsf.vim",
 
     --search within file
-    use "mileszs/ack.vim"
+    "mileszs/ack.vim",
 
     --end file & buffer searching
     ------------------------------------------------------
@@ -106,22 +133,22 @@ require('packer').startup(function()
     --ui styling
 
     --status bar styling
-    use "vim-airline/vim-airline"
-    use "vim-airline/vim-airline-themes"
+    "vim-airline/vim-airline",
+    "vim-airline/vim-airline-themes",
 
     --transaprent background
-    use "tribela/vim-transparent"
+    "tribela/vim-transparent",
 
     -- file tabs
-    use "romgrk/barbar.nvim"
+    "romgrk/barbar.nvim",
 
-    use {
+    {
         "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
         config = function()
             --require"startup".setup(require"configs.startup_nvim")
         end
-    }
+    },
 
     --end ui styling
     ------------------------------------------------------
@@ -132,8 +159,8 @@ require('packer').startup(function()
     ------------------------------------------------------
     --icons
 
-    use "ryanoasis/vim-devicons"
-    use "kyazdani42/nvim-web-devicons"
+    "ryanoasis/vim-devicons",
+    "kyazdani42/nvim-web-devicons",
 
     --end icons
     ------------------------------------------------------
@@ -145,15 +172,15 @@ require('packer').startup(function()
     --git
 
     --git commands in vim
-    use "tpope/vim-fugitive"
+    "tpope/vim-fugitive",
 
     --gitsigns
-    use {
+    {
       'lewis6991/gitsigns.nvim',
       config = function()
         require('gitsigns').setup()
       end
-    }
+    },
 
     --end git
     ------------------------------------------------------
@@ -164,17 +191,16 @@ require('packer').startup(function()
     ------------------------------------------------------
     --colorschemes
 
-    use "safv12/andromeda.vim"
-    use "joshdick/onedark.vim"
-    use "sainnhe/sonokai"
-    use "sainnhe/edge"
-    use "rakr/vim-one"
-    use "marko-cerovac/material.nvim"
-    use "gosukiwi/vim-atom-dark"
-    use "morhetz/gruvbox"
+    "safv12/andromeda.vim",
+    "joshdick/onedark.vim",
+    "sainnhe/sonokai",
+    "sainnhe/edge",
+    "rakr/vim-one",
+    "marko-cerovac/material.nvim",
+    "gosukiwi/vim-atom-dark",
+    "morhetz/gruvbox",
 
     --end colorschemes
     ------------------------------------------------------
     ------------------------------------------------------
-
-end)
+})
