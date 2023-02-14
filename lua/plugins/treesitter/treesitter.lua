@@ -1,6 +1,10 @@
+require 'nvim-treesitter.install'.prefer_git = false
+-- M.compilers = { vim.fn.getenv('CC'), "cc", "gcc", "clang", "cl", "zig" }
+require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "help", "javascript", "typescript" },
+  ensure_installed = { "c", "lua", "vim", "help" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -12,5 +16,6 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
+	additional_vim_regex_highlighting = false
   },
 }
