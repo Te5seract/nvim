@@ -31,8 +31,8 @@ require("lazy").setup({
 	-- one dark
 	"navarasu/onedark.nvim",
 
-	-- andromeda
-	"safv12/andromeda.vim",
+	-- kanagawa
+	"rebelot/kanagawa.nvim",
 
 	-- end colour schemes
 	--/////////////////////////////////////////
@@ -102,8 +102,8 @@ require("lazy").setup({
 	-- git signs
 	"lewis6991/gitsigns.nvim",
 
-	-- git fugitive
-	
+	-- commenting
+	"preservim/nerdcommenter",
 
 	-- end code helpers
 	--/////////////////////////////////////////
