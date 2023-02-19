@@ -15,7 +15,7 @@ require("lazy").setup({
 		"nvim-telescope/telescope.nvim", tag = "0.1.1",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-		} 
+		}
 	},
 
 	"nvim-telescope/telescope-symbols.nvim",
@@ -33,6 +33,9 @@ require("lazy").setup({
 
 	-- kanagawa
 	"rebelot/kanagawa.nvim",
+
+	-- onenord
+	"rmehri01/onenord.nvim",
 
 	-- end colour schemes
 	--/////////////////////////////////////////
@@ -104,6 +107,8 @@ require("lazy").setup({
 
 	-- commenting
 	"preservim/nerdcommenter",
+
+	"mattn/emmet-vim",
 
 	-- end code helpers
 	--/////////////////////////////////////////

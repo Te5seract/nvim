@@ -27,8 +27,13 @@ require(plugins .. "nvimtree/nvimtree")
 -- colourschemes
 
 -- one dark config
-require(plugins .. "onedark/onedark")
+--require(plugins .. "onedark/onedark")
+
+-- kanagawa
 -- require(plugins .. "kanagawa/kanagawa")
+
+-- onenord
+require(plugins .. "onenord/onenord")
 
 -- end colourschemes
 -- =======================================
@@ -51,7 +56,7 @@ require(plugins .. "treesitter/treesitter")
 require(plugins .. "mason/mason")
 require(plugins .. "lsp-zero/lsp-zero")
 require(plugins .. "gitsigns/gitsigns")
-require(plugins .. "comment/comment")
+require(plugins .. "emmet/emmet")
 
 -- end code helpers
 -- =======================================
