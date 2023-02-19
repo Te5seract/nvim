@@ -30,10 +30,25 @@ require(plugins .. "nvimtree/nvimtree")
 --require(plugins .. "onedark/onedark")
 
 -- kanagawa
--- require(plugins .. "kanagawa/kanagawa")
+require(plugins .. "kanagawa/kanagawa")
 
 -- onenord
-require(plugins .. "onenord/onenord")
+--require(plugins .. "onenord/onenord")
+
+-- neon
+--require(plugins .. "neon/neon")
+
+-- one-doom
+--require(plugins .. "doom-one/doom-one")
+
+-- palenightfall
+--require(plugins .. "palenightfall/palenightfall")
+
+-- one pro
+--require(plugins .. "onepro/onepro")
+
+-- catppuccin
+--require(plugins .. "catppuccin/catppuccin")
 
 -- end colourschemes
 -- =======================================

@@ -37,6 +37,24 @@ require("lazy").setup({
 	-- onenord
 	"rmehri01/onenord.nvim",
 
+	-- neon
+	"rafamadriz/neon",
+
+	-- doom-one
+	"NTBBloodbath/doom-one.nvim",
+
+	-- palenightfall
+	"JoosepAlviste/palenightfall.nvim",
+
+	-- one pro
+	"rafamadriz/onepro",
+
+	-- catppuccin
+	{ "catppuccin/nvim", name = "catppuccin" },
+
+	-- andromeda
+	"safv12/andromeda.vim",
+
 	-- end colour schemes
 	--/////////////////////////////////////////
 
