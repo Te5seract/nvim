@@ -19,19 +19,20 @@ require('kanagawa').setup({
 })
 
 local my_colors = {
-    bg = "#23262e", -- 23262e
-	springBlue = "#ee5d43",
-	crystalBlue = "#ffe66d",
-	springGreen = "#96e072",
-	waveRed = "#ff008e",
-	carpYellow = "#00e8c6", -- light blue
-	oniViolet = "#c74ded", -- purple
+    bg = "#2d2c42", -- 23262e
+	springBlue = "#ee6456",
+	crystalBlue = "#ffe86c",
+	springGreen = "#a3e083",
+	waveRed = "#ff5798",
+	carpYellow = "#31e8c8", -- light blue
+	oniViolet = "#c75fed", -- purple
 	fujiWhite = "#f3a642", -- orange 12e8c6
-	waveAqua2 = "#ffe66d",
-	boatYellow2 = "#c74ded", -- yellow f38b55
-	surimiOrange = "#ee5d43",
-	autumnGreen = "#00e8c6", -- light blue (for lua line)
-	sakuraPink = "#96e072",
+	waveAqua2 = "#ffe86c",
+	boatYellow2 = "#c75fed", -- yellow f38b55
+	surimiOrange = "#ee6456",
+	autumnGreen = "#31e8c8", -- light blue (for lua line)
+	sakuraPink = "#a3e083",
+	fujiGray = "#484569",
 }
 
 require('kanagawa').setup({ overrides = overrides, colors = my_colors })
