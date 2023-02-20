@@ -50,6 +50,15 @@ require(plugins .. "kanagawa/kanagawa")
 -- catppuccin
 --require(plugins .. "catppuccin/catppuccin")
 
+-- zephyr
+--require(plugins .. "zephyr/zephyr")
+
+-- sonokai
+--require(plugins .. "sonokai/sonokai")
+
+--edge
+--require(plugins .. "edge/edge")
+
 -- end colourschemes
 -- =======================================
 
@@ -60,6 +69,7 @@ require(plugins .. "lualine/lualine")
 require(plugins .. "blankline/blankline")
 require(plugins .. "winbar/winbar")
 require(plugins .. "bufferline/bufferline")
+--require(plugins .. "tabby/tabby")
 
 -- end UI styling
 -- =======================================
@@ -72,6 +82,7 @@ require(plugins .. "mason/mason")
 require(plugins .. "lsp-zero/lsp-zero")
 require(plugins .. "gitsigns/gitsigns")
 require(plugins .. "emmet/emmet")
+require(plugins .. "highlight-colors/highlight-colors")
 
 -- end code helpers
 -- =======================================

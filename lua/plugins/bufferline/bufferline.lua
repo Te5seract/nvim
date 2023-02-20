@@ -64,7 +64,7 @@ require("bufferline").setup {
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { "|", "|" }
 		-- separator_style = "slant" | "thick" | "thin" | { "any", "any" },
-		separator_style = "slant",
+		separator_style = "thin",
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 		hover = {
@@ -74,22 +74,6 @@ require("bufferline").setup {
 		},
 		-- sort_by = "insert_after_current" |"insert_at_end" | "id" | "extension" | "relative_directory" | "directory" | "tabs" | function(buffer_a, buffer_b)
 		sort_by = "directory",
-        highlights = {
-			diagnostic = {
-				fg = "#ffffff"
-			},
-			tab = {
-				fg = "#ffffff",
-				bg = "#ffffff"
-			},
-            fill = {
-                fg = "#ffffff",
-                bg = "#ffffff",
-            },
-            background = {
-                fg = "#ffffff",
-                bg = "#ffffff"
-            },
-		}
+        highlights = {}
 	}
 }

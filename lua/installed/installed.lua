@@ -55,6 +55,17 @@ require("lazy").setup({
 	-- andromeda
 	"safv12/andromeda.vim",
 
+	{
+		"glepnir/zephyr-nvim",
+	  	dependencies = { "nvim-treesitter/nvim-treesitter", opt = true },
+	},
+
+	-- sonokai
+	"sainnhe/sonokai",
+
+	-- edge
+	"sainnhe/edge",
+
 	-- end colour schemes
 	--/////////////////////////////////////////
 
@@ -75,6 +86,9 @@ require("lazy").setup({
 
 	-- bufferline
 	{"akinsho/bufferline.nvim", dependencies = "kyazdani42/nvim-web-devicons"},
+
+	-- tabby
+	"nanozuki/tabby.nvim",
 
 	-- end UI styling
 	--/////////////////////////////////////////
@@ -126,7 +140,11 @@ require("lazy").setup({
 	-- commenting
 	"preservim/nerdcommenter",
 
+	-- emmet
 	"mattn/emmet-vim",
+
+	-- nvim highlight colours
+	"brenoprata10/nvim-highlight-colors",
 
 	-- end code helpers
 	--/////////////////////////////////////////
