@@ -32,7 +32,7 @@ local my_colors = {
 	surimiOrange = "#ee6456",
 	autumnGreen = "#31e8c8", -- light blue (for lua line)
 	sakuraPink = "#a3e083",
-	fujiGray = "#484569",
+	fujiGray = "#575480",
 }
 
 require('kanagawa').setup({ overrides = overrides, colors = my_colors })
