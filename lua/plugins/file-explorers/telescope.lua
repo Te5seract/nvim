@@ -29,7 +29,3 @@ require("telescope").setup {
 		}
 	}
 }
-
--- file browser
---require("telescope").load_extension "file_browser"
-vim.keymap.set("n", "<leader>fb", "<cmd>:Telescope file_browser<cr>")

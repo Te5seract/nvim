@@ -1,3 +1,7 @@
+-- file browser
+--require("telescope").load_extension "file_browser"
+vim.keymap.set("n", "<leader>fb", "<cmd>:Telescope file_browser<cr>")
+
 TelescopeColours = {
 	TelescopePromptBorder = {
 		fg = "#262742",
@@ -38,4 +42,3 @@ TelescopeColours = {
 for hl, col in pairs(TelescopeColours) do
 	vim.api.nvim_set_hl(0, hl, col);
 end
-

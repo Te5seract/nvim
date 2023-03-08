@@ -1,7 +1,8 @@
-require("../plugins/lazyvim/lazyvim")
+require("plugins/lazy-nvim")
 
 require("lazy").setup({
-	--/////////////////////////////////////////
+	-----------------------------------------------
+	-----------------------------------------------
 	-- file explorers
 
 	-- nvim tree
@@ -23,53 +24,72 @@ require("lazy").setup({
 	"nvim-lua/popup.nvim",
 
 	-- end file explorers
-	--/////////////////////////////////////////
+	-----------------------------------------------
+	-----------------------------------------------
 
-	--/////////////////////////////////////////
-	-- colour schemes
+	-----------------------------------------------
+	-----------------------------------------------
+	-- code helpers
 
-	-- one dark
-	"navarasu/onedark.nvim",
+	-- lsp zero
+	{
+	  'VonHeikemen/lsp-zero.nvim',
+	  branch = 'v1.x',
+	  dependencies = {
+		-- LSP Support
+		{'neovim/nvim-lspconfig'},             -- Required
+		{'williamboman/mason.nvim'},           -- Optional
+		{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
+		-- Autocompletion
+		{'hrsh7th/nvim-cmp'},         -- Required
+		{'hrsh7th/cmp-nvim-lsp'},     -- Required
+		{'hrsh7th/cmp-buffer'},       -- Optional
+		{'hrsh7th/cmp-path'},         -- Optional
+		{'saadparwaiz1/cmp_luasnip'}, -- Optional
+		{'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+		-- Snippets
+		{'L3MON4D3/LuaSnip'},             -- Required
+		{'rafamadriz/friendly-snippets'}, -- Optional
+	  }
+	},
+
+	-- tree sitter
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+	-- emmet
+	"mattn/emmet-vim",
+
+	-- nvim highlight colours
+	"brenoprata10/nvim-highlight-colors",
+
+	-- commenting
+	"preservim/nerdcommenter",
+
+	-- surround
+	"tpope/vim-surround",
+
+	-- auto closing brackets, strings, etc...
+	"jiangmiao/auto-pairs",
+
+	-- end code helpers
+	-----------------------------------------------
+	-----------------------------------------------
+
+	-----------------------------------------------
+	-----------------------------------------------
+	-- colourschemes
+	
 	-- kanagawa
 	"rebelot/kanagawa.nvim",
 
-	-- onenord
-	"rmehri01/onenord.nvim",
+	-- end colourschemes
+	-----------------------------------------------
+	-----------------------------------------------
 
-	-- neon
-	"rafamadriz/neon",
-
-	-- doom-one
-	"NTBBloodbath/doom-one.nvim",
-
-	-- palenightfall
-	"JoosepAlviste/palenightfall.nvim",
-
-	-- one pro
-	"rafamadriz/onepro",
-
-	-- catppuccin
-	{ "catppuccin/nvim", name = "catppuccin" },
-
-	-- andromeda
-	"safv12/andromeda.vim",
-
-	{
-		"glepnir/zephyr-nvim",
-	  	dependencies = { "nvim-treesitter/nvim-treesitter", opt = true },
-	},
-
-	-- sonokai
-	"sainnhe/sonokai",
-
-	-- edge
-	"sainnhe/edge",
-
-	-- end colour schemes
-	--/////////////////////////////////////////
-
-	--/////////////////////////////////////////
+	-----------------------------------------------
+	-----------------------------------------------
 	-- UI styling
 
 	-- lualine
@@ -87,65 +107,18 @@ require("lazy").setup({
 	-- bufferline
 	{"akinsho/bufferline.nvim", dependencies = "kyazdani42/nvim-web-devicons"},
 
-	-- tabby
-	"nanozuki/tabby.nvim",
-
 	-- end UI styling
-	--/////////////////////////////////////////
+	-----------------------------------------------
+	-----------------------------------------------
 
-	--/////////////////////////////////////////
-	-- code helpers
-
-	-- tree sitter (better syntax highlighting)
-	"nvim-treesitter/nvim-treesitter",
-
-	-- mason lsp installer
-	{
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-	},
-
-	{
-	  	"VonHeikemen/lsp-zero.nvim",
-	  	branch = "v1.x",
-	  	dependencies = {
-			-- LSP Support
-			{"neovim/nvim-lspconfig"},             -- Required
-			{"williamboman/mason.nvim"},           -- Optional
-			{"williamboman/mason-lspconfig.nvim"}, -- Optional
-
-			-- Autocompletion
-			{"hrsh7th/nvim-cmp"},         -- Required
-			{"hrsh7th/cmp-nvim-lsp"},     -- Required
-			{"hrsh7th/cmp-buffer"},       -- Optional
-			{"hrsh7th/cmp-path"},         -- Optional
-			{"saadparwaiz1/cmp_luasnip"}, -- Optional
-			{"hrsh7th/cmp-nvim-lua"},     -- Optional
-
-			-- Snippets
-			{"L3MON4D3/LuaSnip"},             -- Required
-			{"rafamadriz/friendly-snippets"}, -- Optional
-	  	}
-	},
-
-	-- surround
-	"tpope/vim-surround",
-
-	-- auto closing brackets, strings, etc...
-	"jiangmiao/auto-pairs",
+	-----------------------------------------------
+	-----------------------------------------------
+	-- git
 
 	-- git signs
 	"lewis6991/gitsigns.nvim",
-
-	-- commenting
-	"preservim/nerdcommenter",
-
-	-- emmet
-	"mattn/emmet-vim",
-
-	-- nvim highlight colours
-	"brenoprata10/nvim-highlight-colors",
-
-	-- end code helpers
-	--/////////////////////////////////////////
+	
+	-- end git
+	-----------------------------------------------
+	-----------------------------------------------
 })
