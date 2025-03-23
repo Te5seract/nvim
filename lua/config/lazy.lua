@@ -66,6 +66,12 @@ require("lazy").setup({
         opts = {}
     },
 
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+
+
     -- colourshemes
 
     { "sainnhe/edge" },
