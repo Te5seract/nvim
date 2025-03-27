@@ -12,3 +12,13 @@ vim.opt.foldenable = false  -- Start with folds closed (set to true if you want 
 vim.opt.foldlevel = 99      -- Keep most folds open
 
 vim.opt.wrap = false;
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "css", "scss", "sass", "less" },
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})
