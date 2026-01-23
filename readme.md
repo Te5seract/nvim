@@ -1,19 +1,20 @@
-# Neovim config 2025
+##Install LSPs
 
-## Controls
+Lua LSP (windows) 
 
-### Folds
-* zc → Close fold
-* zo → Open fold
-* za → Toggle fold
-* zM → Close all folds
-* zR → Open all folds
+```bash scoop install lua-language-server```
 
-### File exploring
-<leader>o → nvim-tree
-<leader>ff → file explorer
-<leader>fb → file buffers
-<leader>fg → file grep
+JS, TS, JSON, HTML & CSS
 
-### Colourschemes
-<leader>cs → view/select a colourscheme from the list
+```bash npm install -g typescript typescript-language-server vscode-langservers-extracted```
+
+YAML
+
+```bash npm install -g yaml-language-server```
+
+PHP
+
+```bash npm install -g intelephense```
+
+##Install Greppers
+```bash scoop install ripgrep```

@@ -1,3 +1,20 @@
+if vim.fn.has("win32") == 1 then
+    vim.opt.shell = "powershell.exe"
+    vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+    -- ... other windows shell settings
+else
+    -- Mac/Linux defaults (usually already set, but good for peace of mind)
+    vim.opt.shell = "zsh" -- or "bash"
+end
+
+-- keymaps --
+
+-- leader
+vim.g.mapleader = " "   -- Space as leader
+vim.g.maplocalleader = " "
+vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+
+-- general settings --
 vim.opt.tabstop = 4        -- Number of spaces for a tab
 vim.opt.shiftwidth = 4     -- Number of spaces for auto-indent
 vim.opt.softtabstop = 4    -- Number of spaces when pressing <Tab>
