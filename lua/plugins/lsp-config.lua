@@ -38,6 +38,12 @@ return {
           vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
           vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
           vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
+
+          -- Normal mode: Check signature while over a function
+          vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { desc = 'Get Signature Help' })
+
+            -- Insert mode: See parameters while you are actually typing them
+          vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, { desc = 'Get Signature Help' })
         end,
       })
     end,
